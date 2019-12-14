@@ -1,6 +1,9 @@
 'use strict';
 
 import Employee from './Employee.js';
+import Admin from './Admin.js';
+import Designer from './Designer.js';
+import Coder from './Coder.js';
 
 export default class Company{
     constructor() {
@@ -10,11 +13,6 @@ export default class Company{
         return this._employeesArray;
     }
 
-    pushEmployee(employee){
-        if (employee instanceof Employee) {
-            this._employeesArray.push(employee);
-        }
-    }
 
     pushAdmin(admin){
         if (admin instanceof Admin) {
@@ -41,9 +39,3 @@ export default class Company{
     };
 
 }
-const freshcode = new Company();
-const worker1 = new Employee("name","surname",25, 300, "Programmer", 1);
-freshcode.pushEmployee(worker1);
-console.log(freshcode.employeesArray);
-freshcode.deleteEmployee(1);
-console.log(freshcode.employeesArray);

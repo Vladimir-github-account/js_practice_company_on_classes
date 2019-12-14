@@ -6,7 +6,6 @@ export default class Employee extends Man{
     constructor(firstName, lastName, age, salary, id){
         super(firstName, lastName, age);
         this._salary = salary;
-
         this._id = id;
     }
     get salary(){
@@ -15,12 +14,7 @@ export default class Employee extends Man{
     set salary(salary){
         this._salary = salary;
     }
-    get speciality(){
-        return this._speciality;
-    }
-    set speciality(speciality){
-        this._speciality = speciality;
-    }
+
     get id(){
         return this._id;
     }
