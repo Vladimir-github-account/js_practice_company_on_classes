@@ -20,12 +20,34 @@ function showEmployeesList() {
     }
 
     freshcode.employeesArray.forEach(employee =>
-        getEmployeesList.append(createEmployeesListListItemElem(`Name: ${employee.firstName} ${employee.lastName} age: ${employee.age} salary: ${employee.salary} speciality: ${employee.speciality} id:  ${employee.id}`))
+        getEmployeesList.append(createEmployeesListListItemElem(employee))
     );
 
     function createEmployeesListListItemElem(employee){
         const employeesListListItem = document.createElement("li");
-        employeesListListItem.innerText = employee;
+
+        const fullNameHeader =  document.createElement("h3");
+        fullNameHeader.classList.add('fullNameHeader');
+        fullNameHeader.innerText = 'Name: ' + employee.firstName + ' ' + employee.lastName;
+        const ageHeader =  document.createElement("h3");
+        ageHeader.classList.add('ageHeader');
+        ageHeader.innerText = 'Age: ' + employee.age ;
+        const salaryHeader =  document.createElement("h3");
+        salaryHeader.classList.add('salaryHeader');
+        salaryHeader.innerText ='Salary: ' + employee.salary;
+        const specialityHeader =  document.createElement("h3");
+        specialityHeader.classList.add('salaryHeader');
+        specialityHeader.innerText ='Speciality: ' + employee.speciality;
+        const idHeader =  document.createElement("h3");
+        idHeader.classList.add('idHeader');
+        idHeader.innerText = employee.id;
+
+        employeesListListItem.appendChild(fullNameHeader);
+        employeesListListItem.appendChild(ageHeader);
+        employeesListListItem.appendChild(salaryHeader);
+        employeesListListItem.appendChild(specialityHeader);
+        employeesListListItem.appendChild(idHeader);
+
         return employeesListListItem;
     }
 

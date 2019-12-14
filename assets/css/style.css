@@ -21,13 +21,14 @@ form {
 
 #getEmployeesList{
     flex:1;
+    margin-right: 15px;
 }
 
 #getEmployeesList > li {
     border-bottom: 1px solid darkblue;
 
     padding: 9px;
-    border-radius: 9px;
+    border-radius: 2px;
 }
 
 #getEmployeesList > li + li {
