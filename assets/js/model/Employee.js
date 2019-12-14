@@ -3,10 +3,10 @@
 import Man from './Man.js';
 
 export default class Employee extends Man{
-    constructor(firstName, lastName, age, salary, speciality, id){
+    constructor(firstName, lastName, age, salary, id){
         super(firstName, lastName, age);
         this._salary = salary;
-        this._speciality = speciality;
+
         this._id = id;
     }
     get salary(){

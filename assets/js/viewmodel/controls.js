@@ -7,6 +7,6 @@ export const employeeFirstNameInput = document.getElementById("employeeFirstName
 export const employeeLastNameInput = document.getElementById("employeeLastNameInput");
 export const employeeAgeInput = document.getElementById("employeeAgeInput");
 export const employeeSalaryInput = document.getElementById("employeeSalaryInput");
-export const employeeSpecialityInput = document.getElementById("employeeSpecialityInput");
+
 export const deleteEmployeeButton = document.getElementById("deleteEmployeeButton");
 export const deleteEmployeeIdInput = document.getElementById("deleteEmployeeIdInput");

@@ -2,7 +2,7 @@
 
 import Company from '../model/Company.js';
 import Employee from '../model/Employee.js';
-import {getEmployeesButton, getEmployeesList, addEmployeeAdminButton,employeeAgeInput,employeeFirstNameInput,employeeLastNameInput,employeeSalaryInput,employeeSpecialityInput,deleteEmployeeButton,deleteEmployeeIdInput} from './controls.js';
+import {getEmployeesButton, getEmployeesList, addEmployeeAdminButton,employeeAgeInput,employeeFirstNameInput,employeeLastNameInput,employeeSalaryInput,deleteEmployeeButton,deleteEmployeeIdInput} from './controls.js';
 
 const freshcode = new Company();
 
@@ -17,7 +17,7 @@ function showEmployeesList() {
     }
 
     freshcode.employeesArray.forEach(employee =>
-        getEmployeesList.append(createEmployeesListListItemElem(`Name: ${employee.firstName} ${employee.lastName} age: ${employee.age} salary: ${employee.salary} speciality: ${employee.speciality} salary: ${employee.salary} id:  ${employee.id}`))
+        getEmployeesList.append(createEmployeesListListItemElem(`Name: ${employee.firstName} ${employee.lastName} age: ${employee.age} salary: ${employee.salary}   id:  ${employee.id}`))
     );
 
     function createEmployeesListListItemElem(employee){
@@ -33,11 +33,10 @@ addEmployeeAdminButton.onclick = addEmployee;
 function addEmployee() {
 
     const newEmployee = new Employee(
-        employeeAgeInput.value,
         employeeFirstNameInput.value,
         employeeLastNameInput.value,
+        employeeAgeInput.value,
         employeeSalaryInput.value,
-        employeeSpecialityInput.value,
         id,
     );
     id++;
