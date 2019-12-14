@@ -2,7 +2,7 @@
 
 import Company from '../model/Company.js';
 import Employee from '../model/Employee.js';
-import {getEmployeesButton, getEmployeesList, addEmployeeButton,employeeAgeInput,employeeFirstNameInput,employeeLastNameInput,employeeSalaryInput,employeeSpecialityInput,deleteEmployeeButton,deleteEmployeeIdInput} from './controls.js';
+import {getEmployeesButton, getEmployeesList, addEmployeeAdminButton,employeeAgeInput,employeeFirstNameInput,employeeLastNameInput,employeeSalaryInput,employeeSpecialityInput,deleteEmployeeButton,deleteEmployeeIdInput} from './controls.js';
 
 const freshcode = new Company();
 
@@ -28,7 +28,7 @@ function showEmployeesList() {
 
 }
 
-addEmployeeButton.onclick = addEmployee;
+addEmployeeAdminButton.onclick = addEmployee;
 
 function addEmployee() {
 
@@ -42,7 +42,7 @@ function addEmployee() {
     );
     id++;
     freshcode.pushEmployee(newEmployee);
-    console.log(freshcode);
+    employeeAgeInput.value = employeeFirstNameInput.value = employeeLastNameInput.value = employeeSalaryInput.value = "";
     showEmployeesList();
 }
 
@@ -51,7 +51,7 @@ deleteEmployeeButton.onclick = deleteEmployee;
 function deleteEmployee() {
     
     freshcode.deleteEmployee(Number(deleteEmployeeIdInput.value));
-    console.log(freshcode);
+    deleteEmployeeIdInput.value = "";
     showEmployeesList();
 
 }
