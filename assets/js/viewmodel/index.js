@@ -1,8 +1,10 @@
 'use strict';
 import Admin from "../model/Admin.js";
+import Coder from "../model/Coder.js";
+import Designer from "../model/Designer.js";
 import Company from '../model/Company.js';
 
-import {getEmployeesButton, getEmployeesList, addEmployeeAdminButton,employeeAgeInput,employeeFirstNameInput,employeeLastNameInput,employeeSalaryInput,deleteEmployeeButton,deleteEmployeeIdInput} from './controls.js';
+import {getEmployeesButton, getEmployeesList, addEmployeeAdminButton,addEmployeeDesignerButton,addEmployeeCoderButton,employeeAgeInput,employeeFirstNameInput,employeeLastNameInput,employeeSalaryInput,deleteEmployeeButton,deleteEmployeeIdInput} from './controls.js';
 
 
 const freshcode = new Company();
@@ -29,9 +31,9 @@ function showEmployeesList() {
 
 }
 
-addEmployeeAdminButton.onclick = addEmployee;
+addEmployeeAdminButton.onclick = addEmployeeAdmin;
 
-function addEmployee() {
+function addEmployeeAdmin() {
 
     const newAdmin = new Admin(
         employeeFirstNameInput.value,
@@ -42,6 +44,40 @@ function addEmployee() {
     );
     id++;
     freshcode.pushAdmin(newAdmin);
+    employeeAgeInput.value = employeeFirstNameInput.value = employeeLastNameInput.value = employeeSalaryInput.value = "";
+    showEmployeesList();
+}
+
+addEmployeeCoderButton.onclick = addEmployeeCoder;
+
+function addEmployeeCoder() {
+
+    const newCoder = new Coder(
+        employeeFirstNameInput.value,
+        employeeLastNameInput.value,
+        employeeAgeInput.value,
+        employeeSalaryInput.value,
+        id,
+    );
+    id++;
+    freshcode.pushCoder(newCoder);
+    employeeAgeInput.value = employeeFirstNameInput.value = employeeLastNameInput.value = employeeSalaryInput.value = "";
+    showEmployeesList();
+}
+
+addEmployeeDesignerButton.onclick = addEmployeeDesigner;
+
+function addEmployeeDesigner() {
+
+    const newDesigner = new Designer(
+        employeeFirstNameInput.value,
+        employeeLastNameInput.value,
+        employeeAgeInput.value,
+        employeeSalaryInput.value,
+        id,
+    );
+    id++;
+    freshcode.pushDesigner(newDesigner);
     employeeAgeInput.value = employeeFirstNameInput.value = employeeLastNameInput.value = employeeSalaryInput.value = "";
     showEmployeesList();
 }

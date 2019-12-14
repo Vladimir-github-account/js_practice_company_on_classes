@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>PRACTICE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script defer type="module" src="./assets/js/model/Man.js"></script>
     <script defer type="module" src="./assets/js/model/Employee.js"></script>
@@ -18,14 +20,26 @@
     <div id="getEmployeesButton">
         SHOW EMPLOYEES LIST
     </div>
-    <ul id="getEmployeesList"></ul>
-    <input type="text" id="employeeFirstNameInput" placeholder="first name" required>
-    <input type="text" id="employeeLastNameInput" placeholder="last name" required>
-    <input type="text" id="employeeAgeInput" placeholder="age">
-    <input type="text" id="employeeSalaryInput" placeholder="salary">
+    <div id="listAndInputsContainer">
+        <ul id="getEmployeesList"></ul>
+        <div id="inputContainer">
+            <input type="text" id="employeeFirstNameInput" placeholder="first name" required>
+            <input type="text" id="employeeLastNameInput" placeholder="last name" required>
+            <input type="text" id="employeeAgeInput" placeholder="age">
+            <input type="text" id="employeeSalaryInput" placeholder="salary">
+        </div>
+
+    </div>
+
 
     <div id="addEmployeeAdminButton">
         ADD EMPLOYEE ADMIN
+    </div>
+    <div id="addEmployeeCoderButton">
+        ADD EMPLOYEE CODER
+    </div>
+    <div id="addEmployeeDesignerButton">
+        ADD EMPLOYEE DESIGNER
     </div>
     <input type="text" id="deleteEmployeeIdInput" placeholder="id" required>
     <div id="deleteEmployeeButton">

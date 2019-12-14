@@ -3,6 +3,8 @@
 export const getEmployeesButton = document.getElementById("getEmployeesButton");
 export const getEmployeesList = document.getElementById("getEmployeesList");
 export const addEmployeeAdminButton = document.getElementById("addEmployeeAdminButton");
+export const addEmployeeCoderButton = document.getElementById("addEmployeeCoderButton");
+export const addEmployeeDesignerButton = document.getElementById("addEmployeeDesignerButton");
 export const employeeFirstNameInput = document.getElementById("employeeFirstNameInput");
 export const employeeLastNameInput = document.getElementById("employeeLastNameInput");
 export const employeeAgeInput = document.getElementById("employeeAgeInput");

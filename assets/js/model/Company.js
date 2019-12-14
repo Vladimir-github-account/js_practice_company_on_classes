@@ -6,8 +6,8 @@ import Designer from './Designer.js';
 import Coder from './Coder.js';
 
 export default class Company{
-    constructor() {
-        this._employeesArray = [];
+    constructor(employees) {
+        this._employeesArray = employees || [];
     }
     get employeesArray(){
         return this._employeesArray;

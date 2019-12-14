@@ -2,6 +2,12 @@
 
 import Man from './Man.js';
 
+export const positions = {
+    ADMIN: 'Admin',
+    CODER: 'Coder',
+    DESIGNER: 'Designer',
+};
+
 export default class Employee extends Man{
     constructor(firstName, lastName, age, salary, id){
         super(firstName, lastName, age);
